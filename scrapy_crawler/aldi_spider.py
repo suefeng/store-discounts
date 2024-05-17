@@ -37,7 +37,7 @@ class AldiSpider(scrapy.Spider):
                     item['product_url'] = product_url
                     product = response.css("article").css("a[href='" + product_url + "']")
                     if product:
-                        item['title'] = product.css(".box--description--header::text").get().strip()
+                        item['title'] = product.css(".box--description--header").get().split("\n\t\t\t\t")[1].strip()
                         item['price'] = self.price(product)
                         item['image_url'] = product.css("img").css("::attr(src)").get()
                     items.append(item)
