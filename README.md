@@ -5,6 +5,11 @@ This is a web scraper tool to help you find store discounts. It uses [Scrapy](ht
 ## Currently supported stores
 
 - [Aldi USA](https://www.aldi.us/weekly-specials/this-weeks-aldi-finds/)
+- [Fresh Farms](https://www.freshfarms.com/weekly-specials/)
+
+## WIP
+
+- [Marianos](https://www.marianos.com/weeklyad/shoppable)
 
 ## Required dependencies
 
