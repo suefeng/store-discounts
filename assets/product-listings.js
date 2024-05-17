@@ -11,6 +11,7 @@ const createProduct = async () => {
 
     const heading = document.createElement("h1");
     heading.innerHTML = storeName;
+    heading.setAttribute("class", "sticky");
     const section = document.createElement("section");
     section.setAttribute("id", storeName);
     section.appendChild(heading);
@@ -24,14 +25,19 @@ const createProduct = async () => {
       const p = document.createElement("p");
 
       h2.innerHTML = product.title;
-      a.setAttribute("href", product.product_url);
-      a.setAttribute("target", "_blank");
-      a.setAttribute("rel", "noopener noreferrer");
-      img.setAttribute("src", product.image_url);
-      p.innerHTML = product.price;
-
       a.appendChild(h2);
-      a.appendChild(img);
+      if (product.product_url === "not found" || product.product_url === "") {
+        a.setAttribute("pointer-events", "none");
+      } else {
+        a.setAttribute("href", product.product_url);
+        a.setAttribute("target", "_blank");
+        a.setAttribute("rel", "noopener noreferrer");
+      }
+      if (product.image_url !== "not found" && product.image_url !== "") {
+        img.setAttribute("src", product.image_url);
+        a.appendChild(img);
+      }
+      p.innerHTML = product.price;
       a.appendChild(p);
 
       article.appendChild(a);

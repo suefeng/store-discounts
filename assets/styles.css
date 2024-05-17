@@ -11,9 +11,11 @@
   color: var(--color-text);
 }
 menu {
+  display: flex;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  gap: 0.5rem;
 }
 article {
   display: flex;
@@ -50,10 +52,24 @@ a:hover {
   border-color: var(--color-link-hover);
   color: var(--color-link-hover);
 }
+a[pointer-events="none"],
+a[pointer-events="none"]:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+  cursor: default;
+}
 img {
   max-width: 100%;
   margin: auto;
 }
 h1 {
   text-transform: capitalize;
+  background-color: #fff;
+}
+h2 {
+  line-height: 1;
+}
+.sticky {
+  position: sticky;
+  top: 0;
 }

@@ -95,18 +95,18 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
 # Playwright settings
-# PLAYWRIGHT_BROWSER_TYPE = "firefox"
-# PLAYWRIGHT_LAUNCH_OPTIONS = {
-#     "headless": False,
-#     "timeout": 20 * 1000,  # 20 seconds
-# }
-# PLAYWRIGHT_CDP_URL = "http://localhost:9222"
-# PLAYWRIGHT_CDP_KWARGS = {
-#     "slow_mo": 1000,
-#     "timeout": 10 * 1000
-# }
-# PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 10 * 1000  # 10 seconds
-# DOWNLOAD_HANDLERS = {
-#     "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-#     "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-# }
+DOWNLOAD_HANDLERS = {
+    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
+PLAYWRIGHT_BROWSER_TYPE = "firefox"
+PLAYWRIGHT_LAUNCH_OPTIONS = {
+    "headless": False,
+    "timeout": 20 * 1000,  # 20 seconds
+}
+PLAYWRIGHT_CDP_URL = "http://localhost:9222"
+PLAYWRIGHT_CDP_KWARGS = {
+    "slow_mo": 1000,
+    "timeout": 10 * 1000
+}
+PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 10 * 1000  # 10 seconds

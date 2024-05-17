@@ -56,4 +56,6 @@ class AldiSpider(scrapy.Spider):
             item['image_url'] = 'not found'
             items.append(item)
 
-        return {'store_name':'aldi', 'items':items}
+        store_object = {'store_name':'aldi', 'items':items}
+
+        yield store_object
